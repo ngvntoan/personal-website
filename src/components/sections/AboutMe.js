@@ -12,17 +12,17 @@ function AboutMe() {
             height = "180px"
             src={Resume.basics.picture}
             alt={Resume.basics.name}
-            className="is-rounded"
+            className="is-rounded shadow"
           />
         </figure>
-        <p className="subtitle is-4 has-text-white has-text-weight-bold">
+        <p className="subtitle is-4 has-text-white has-text-weight-bold" style={{marginTop: 24}}>
           {Resume.basics.x_title}
         </p>
         <p className="subtitle is-5 has-text-white has-text-weight-light summary-text">
           {Resume.basics.summary}
         </p>
         <div className="container interests">
-          <div className="field is-grouped is-grouped-multiline has-text-centered">
+          <div className="field is-grouped is-grouped-multiline has-text-centered" style={{display: 'flex', justifyContent: 'center'}}>
               {Resume.interests.map((value, index) => {
                 return <Badge key={index} text={value.name} faIcon={value.x_icon} />
               })}
